@@ -6,6 +6,7 @@ const app = express();
 const Product = require('./db/product')
 const Jwt = require('jsonwebtoken');
 const Jwtkey = 'anil';
+const PORT = process.env.PORT || 50000;
 
 app.use(express.json());
 app.use(cors());
@@ -103,4 +104,4 @@ function verifyToken(req,resp,next){
     }
 
 }
-app.listen (5000);
+app.listen (PORT);

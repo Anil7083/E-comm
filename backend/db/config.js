@@ -1,2 +1,2 @@
 const mongoose=require('mongoose');
-mongoose.connect("mongodb://localhost:27017/signup");
+mongoose.connect("mongodb+srv://wwwanilabnave2:kuOIH5yogte8dBYU@anil.0ihrbaw.mongodb.net/?retryWrites=true&w=majority&appName=anil/signup");
