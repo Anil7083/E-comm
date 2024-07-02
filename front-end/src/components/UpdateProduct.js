@@ -14,7 +14,7 @@ const UpdateProduct = () => {
     }, [])
 
     const getProductDetails = async () => {
-        let result = await fetch(`http://localhost:5000/product/${params.id}`,{
+        let result = await fetch(`https://e-comm-backend-c3d8.onrender.com/product/${params.id}`,{
             headers: {
                 authorization: `bearer ${JSON.parse(localStorage.getItem('token'))}`
             }}
@@ -28,7 +28,7 @@ const UpdateProduct = () => {
 
     const updateProduct = async () => {
         console.warn(name, price, category, company)
-        let result = await fetch(`http://localhost:5000/product/${params.id}`, {
+        let result = await fetch(`https://e-comm-backend-c3d8.onrender.com/product/${params.id}`, {
             method: 'Put',
             body: JSON.stringify({ name, price, category, company }),
             headers: {
