@@ -15,7 +15,7 @@ const SignUp = () => {
 
     const collectData = async () => {
         console.warn(name, email, password);
-        let result = await fetch('https://e-comm-backend-c3d8.onrender.com/register', {
+        let result = await fetch('https://e-comm-backend-lovat.vercel.app/register', {
             method: 'post',
             body: JSON.stringify({ name, email, password }),
             headers: {
