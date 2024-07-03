@@ -7,7 +7,7 @@ const ProductList = () => {
         getProducts();
     }, [])
     const getProducts = async () => {
-        let result = await fetch('https://e-comm-backend-c3d8.onrender.com/products', {
+        let result = await fetch('https://e-comm-backend-lovat.vercel.app/products', {
             headers: {
                 authorization: `bearer ${JSON.parse(localStorage.getItem('token'))}`
             }
@@ -16,7 +16,7 @@ const ProductList = () => {
         setProducts(result);
     }
     const deleteProduct = async (id) => {
-        let result = await fetch(`https://e-comm-backend-c3d8.onrender.com/product/${id}`, {
+        let result = await fetch(`https://e-comm-backend-lovat.vercel.app/product/${id}`, {
             method: "Delete",
             headers: {
                 authorization: `bearer ${JSON.parse(localStorage.getItem('token'))}`
@@ -30,7 +30,7 @@ const ProductList = () => {
     const searchHandle = async (event) => {
         let key = event.target.value;
         if (key) {
-            let result = await fetch(`https://e-comm-backend-c3d8.onrender.com/search/${key}`,{
+            let result = await fetch(`https://e-comm-backend-lovat.vercel.app/search/${key}`,{
                 headers: {
                     authorization: `bearer ${JSON.parse(localStorage.getItem('token'))}`
                 }
